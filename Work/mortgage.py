@@ -27,6 +27,6 @@ while principal > 0:
         total_paid = total_paid + total_payment
 
     months = months + 1
-    print(f'{months} {total_paid} {principal}')
+    print(f'{months} {total_paid:2f} {principal:2f}')
 
 print(f'Total paid is {round(total_paid, 2)} in {months} months')

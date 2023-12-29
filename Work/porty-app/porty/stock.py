@@ -1,9 +1,11 @@
-from typedproperty import String, Integer, Float
+from .typedproperty import String, Integer, Float
+
 
 class Stock:
     name = String('name')
     shares = Integer('shares')
     price = Float('price')
+
     def __init__(self, name, shares, price):
         self.name = name
         self.shares = shares
@@ -11,8 +13,10 @@ class Stock:
 
     @property
     def cost(self):
-         return self.shares * self.price
+        return self.shares * self.price
+
     def sell(self, nshares):
         self.shares -= nshares
+
     def __repr__(self):
         return f'Stock({self.name!r}, {self.shares!r}, {self.price!r})'

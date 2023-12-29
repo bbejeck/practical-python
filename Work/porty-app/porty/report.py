@@ -2,9 +2,9 @@
 #
 # Exercise 2.4
 import csv
-import fileparse
-from stock import Stock
-from portfolio import Portfolio
+from . import fileparse
+from .stock import Stock
+from .portfolio import Portfolio
 
 
 def read_portfolio(filename):

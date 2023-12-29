@@ -1,6 +1,8 @@
 
-import fileparse
-import stock
+from . import fileparse
+from . import stock
+
+
 class Portfolio:
 
     def __init__(self):
@@ -22,6 +24,7 @@ class Portfolio:
         if not isinstance(holding, stock.Stock):
             raise TypeError('Expected a Stock instance')
         self.holdings.append(holding)
+
     @classmethod
     def from_csv(cls, lines, **opts):
         self = cls()
